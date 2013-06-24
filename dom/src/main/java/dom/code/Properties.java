@@ -1,5 +1,11 @@
 package dom.code;
 
+import javax.jdo.annotations.IdentityType;
+
+import org.apache.isis.applib.annotation.ObjectType;
+
+@javax.jdo.annotations.PersistenceCapable(identityType=IdentityType.DATASTORE)
+@ObjectType("Properties")
 public class Properties {
 
 	private String name;
