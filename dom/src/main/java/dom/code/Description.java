@@ -23,7 +23,8 @@ public class Description {
 	public String getDescription() {
 		return description;
 	}
-	
+	public void setDescription(String description) {
+	}
 	public String title()
 	{
 		return this.languaje;
