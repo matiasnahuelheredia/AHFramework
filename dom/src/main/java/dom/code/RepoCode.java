@@ -1,6 +1,7 @@
 package dom.code;
 
-import java.util.Collections;
+
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.isis.applib.AbstractFactoryAndRepository;
@@ -8,7 +9,7 @@ import org.apache.isis.applib.annotation.ActionSemantics;
 import org.apache.isis.applib.annotation.MemberOrder;
 import org.apache.isis.applib.annotation.ActionSemantics.Of;
 import org.apache.isis.applib.annotation.Named;
-import org.apache.isis.applib.fixtures.AbstractFixture;
+
 
 @Named("Code Generator")
 public class RepoCode extends AbstractFactoryAndRepository {
@@ -23,6 +24,7 @@ public class RepoCode extends AbstractFactoryAndRepository {
 	 
         final String currentUser = currentUserName();
         final List<Exploit> items = allMatches(Exploit.class, Exploit.thoseOwnedBy(currentUser));
+       
         return items;
     }
 }
