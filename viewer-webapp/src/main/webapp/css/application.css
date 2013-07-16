@@ -21,23 +21,24 @@
 
 
 #header {
-    height: 200px;
-    
-    background-image: url("../images/logo.png");
-    background-color:black;
+    width: 70%;
+    height: 150px;
+    background-image: url("");/* replace te image*/
 	background-repeat: no-repeat;
         
 }
-
-#header h1 {
-	display: none;
+.headerContainer {
+	background-color: #000000;
+        background-image: url("../images/logo.png");
 }
+
 
 #container{}
 
 .edit,
 .ok,
-.okButton {
+.okButton
+ {
 	display:inline-block;
 	background-color:#0101DF;
 	color:#000000;
@@ -48,3 +49,36 @@
 	border-radius:4px;
 	cursor:pointer;
 }
+
+
+.myBlockContainer,.even, .odd {
+    background-color: #F78181;
+    
+    padding: 20px;
+    border-radius: 4px 4px 4px 4px;
+    margin-bottom: 1%;
+    position: relative;
+    clear: both;
+}
+
+.collectionContentsAsAjaxTablePanel table.contents tr:hover td {
+    background-color: #BDBDBD;
+    
+}
+
+
+.bookmarkedPagesPanel {
+    background-color: #DF0101;
+}
+
+.collectionContentsAsAjaxTablePanel table.contents tr th {
+background-image: url("../images/orange.jpg");    
+background-color: #FE642E;
+}
+
+body {
+    background-color: #DF0101;
+}
+
+
+
