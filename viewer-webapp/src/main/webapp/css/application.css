@@ -29,7 +29,8 @@
 }
 .headerContainer {
 	background-color: #000000;
-        background-image: url("../images/logo.png");
+        
+	background-image: url("../images/blackback.jpg");
 }
 
 
@@ -63,17 +64,21 @@
 
 .collectionContentsAsAjaxTablePanel table.contents tr:hover td {
     background-color: #BDBDBD;
+    background-image: url("../images/greyduino.jpg");
     
 }
 
 
 .bookmarkedPagesPanel {
     background-color: #DF0101;
+    
 }
 
 .collectionContentsAsAjaxTablePanel table.contents tr th {
-background-image: url("../images/orange.jpg");    
+    
 background-color: #FE642E;
+
+
 }
 
 body {
