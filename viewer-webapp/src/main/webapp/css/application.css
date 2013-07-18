@@ -23,7 +23,7 @@
 #header {
     width: 70%;
     height: 150px;
-    background-image: url("");/* replace te image*/
+    background-image: url("../images/logo.png");/* replace te image*/
 	background-repeat: no-repeat;
         
 }
