@@ -20,6 +20,7 @@ public class RepoCode extends AbstractFactoryAndRepository {
 	    }
 	@ActionSemantics(Of.SAFE)
     @MemberOrder(sequence = "1")
+	@Named ("exploits tools and payloads")
     public List<Exploit> exploitsList() {
 	 
         final String currentUser = currentUserName();
