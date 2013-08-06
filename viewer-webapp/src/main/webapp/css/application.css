@@ -41,7 +41,8 @@
 .okButton
  {
 	display:inline-block;
-	background-color:#0101DF;
+	/*background-color:#0101DF;*/
+	background-color:rgb(255, 38, 67);
 	color:#000000;
 	text-transform:uppercase;
 	font-size:0.9em;
@@ -81,9 +82,20 @@ background-color: #FE642E;
 
 }
 
+.loginPanel{
+background-color: rgb(255, 160, 160);
+}
+.loginPanel form input[type=submit] {
+background-color: rgb(255, 70, 70);
+}
+
 body {
     background-color: #DF0101;
 }
 
 
+#applicationActions .cssMenuPanel .menuh li li a:hover, 
+	#applicationActions .cssMenuPanel .menuh li li p:hover {
+		background-color: #40C0CB !important;
+	}
 

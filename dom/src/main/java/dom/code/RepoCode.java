@@ -20,12 +20,18 @@ public class RepoCode extends AbstractFactoryAndRepository {
 	    }
 	@ActionSemantics(Of.SAFE)
     @MemberOrder(sequence = "1")
-	@Named ("exploits tools and payloads")
+	@Named ("List of exploits tools and payloads")
     public List<Exploit> exploitsList() {
 	 
         final String currentUser = currentUserName();
         final List<Exploit> items = allMatches(Exploit.class, Exploit.thoseOwnedBy(currentUser));
-       
+        
         return items;
     }
+
+	@Named("Search exploits tools and payloads")
+	public String searchExploits(){
+    	return "not available at this time wait next version";
+		
+	}
 }
