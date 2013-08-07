@@ -38,7 +38,5 @@ public class RepoDocuments extends AbstractFactoryAndRepository{
 		
 		
 	}
-    public String iconName() {
-        return "ToDoItem";
-    }
+    
 }
