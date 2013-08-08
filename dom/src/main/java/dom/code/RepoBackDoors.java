@@ -25,7 +25,7 @@ public class RepoBackDoors extends AbstractDomainObject {
     /**
      * TODO document search
      */
-	public List<BackDoor> backDoorSearch(@Optional@Named("Document name")String name,@Optional@Named("Language") Language lang)
+	public List<BackDoor> backDoorSearch(@Optional@Named("Document name")String name,@Optional@Named("Platform") Platform plat)
 	{
     	final String currentUser = currentUserName();
         final List<BackDoor> items = allMatches(BackDoor.class, BackDoor.thoseOwnedBy(currentUser));
