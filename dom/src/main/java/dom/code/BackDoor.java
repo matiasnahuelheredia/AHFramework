@@ -14,7 +14,7 @@ import com.google.common.base.Objects;
 public class BackDoor {
     private String Description;
     private String filename;
-    private Language lang;
+    private Platform plat;
 	
 	public String getFilename() {
 		return filename;
@@ -22,11 +22,12 @@ public class BackDoor {
 	public void setFilename(String filename) {
 		this.filename = filename;
 	}
-	public Language getLang() {
-		return lang;
+	
+	public Platform getPlat() {
+		return plat;
 	}
-	public void setLang(Language lang) {
-		this.lang = lang;
+	public void setPlat(Platform plat) {
+		this.plat = plat;
 	}
 	public String getDescription() {
 		return Description;
