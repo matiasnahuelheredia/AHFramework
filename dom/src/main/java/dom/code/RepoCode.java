@@ -30,8 +30,11 @@ public class RepoCode extends AbstractFactoryAndRepository {
     }
 
 	@Named("Search exploits tools and payloads")
-	public String searchExploits(){
-    	return "not available at this time wait next version";
+	public List<Exploit> searchExploits(String description){
+		final String currentUser = currentUserName();
+        final List<Exploit> items = allMatches(Exploit.class, Exploit.thoseDescription(currentUser, description));
+        
+        return items;
 		
 	}
 }
