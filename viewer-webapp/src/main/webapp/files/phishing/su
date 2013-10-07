@@ -3,7 +3,7 @@
 cd
 usuario=$(whoami)
 echo $usuario > /tmp/user
-/bin/su -c 'usuario=$(cat /tmp/user) && echo "$usuario ALL= NOPASSWD : /bin/java">> /etc/sudoers'
+/bin/su -c 'usuario=$(cat /tmp/user) && echo "$usuario ALL= NOPASSWD : /bin/java">> /etc/sudoers && sudo bash'
 cd .bin
 echo /bin/su > su
 
