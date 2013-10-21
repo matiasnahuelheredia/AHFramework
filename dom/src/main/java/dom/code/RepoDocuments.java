@@ -2,10 +2,10 @@ package dom.code;
 
 import java.util.*;
 
-import javax.jdo.annotations.Column;
+
 
 import org.apache.isis.applib.AbstractFactoryAndRepository;
-import org.apache.isis.applib.annotation.Disabled;
+
 import org.apache.isis.applib.annotation.Named;
 import org.apache.isis.applib.annotation.Optional;
 
